@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,39 @@
     <title>Practice-bootstrap</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 </head>
+
 <body>
     <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST">
-        <label>Surname<input type="text" name="surname" placeholder="Enter your surname" maxlength="20"></label><br>
-        <label>Given Name<input type="text" name="given-name" autocomplete="off" maxlength="20"></label><br>
-        <label>Email<input type="email" name="email" minlength="3"></label><br>
-        <label>Age<input type="number" min="18" max="150"></label><br>
+        <label>Surname</label>
+        <input type="text" name="surname" placeholder="Enter your surname" maxlength="20"></label><br>
+        <label>Given</label>
+        Name<input type="text" name="given-name" autocomplete="off" maxlength="20"></label><br>
+        <label>Email</label>
+        <input type="email" name="email" minlength="3"></label><br>
+        <label>Age</label>
+        <input type="number" min="18" max="150"></label><br>
         <p>Sex</p>
-        <label><input type="radio" name="sex">Male</label>
-        <label><input type="radio" name="sex" checked>Female</label><br>
+        <label>Male</label>
+        <input type="radio" name="sex">
+        <label>Female</label>
+        <input type="radio" name="sex" checked><br>
         <p>Your hobbies:</p>
-        <label><input type="checkbox" name="hobby" checked>Gym</label>
-        <label><input type="checkbox" name="hobby">Swimming</label>
-        <label><input type="checkbox" name="hobby">Coding</label><br>
-        <label>Password<input type="password" required></label><br>
-        <label>How hungry are you?<input type="range" min="0" max="100" value="20" name="range"></label><br>
-        <label>Your time<input type="time" name="time"></label><br>
-        <label>Enter your favorite color<input type="color" name="color"></label><br>
-        <label>Enter your Date of Birth<input type="date" name="date"></label><br>
+        <label>Gym</label>
+        <input type="checkbox" name="hobby" checked>
+        <label>Swimming</label>
+        <input type="checkbox" name="hobby">
+        <label>Coding</label><br>
+        <input type="checkbox" name="hobby">
+        <label>Password</label><br>
+        <input type="password" required>
+        <label>How hungry are you?</label><br>
+        <input type="range" min="0" max="100" value="20" name="range">
+        <label>Your time</label><br>
+        <input type="time" name="time">
+        <label>Enter your favorite color</label><br>
+        <input type="color" name="color">
+        <label>Enter your Date of Birth</label><br>
+        <input type="date" name="date">
         <select name="subject">
             <option>Select subject</option>
             <option>Math</option>
@@ -35,4 +51,5 @@
         <button>Submit</button>
     </form>
 </body>
+
 </html>
