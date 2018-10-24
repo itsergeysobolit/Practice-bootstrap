@@ -6,49 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Practice-bootstrap</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 </head>
 
 <body>
-    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST">
-        <label>Surname</label>
-        <input type="text" name="surname" placeholder="Enter your surname" maxlength="20"></label><br>
-        <label>Given</label>
-        Name<input type="text" name="given-name" autocomplete="off" maxlength="20"></label><br>
-        <label>Email</label>
-        <input type="email" name="email" minlength="3"></label><br>
-        <label>Age</label>
-        <input type="number" min="18" max="150"></label><br>
-        <p>Sex</p>
-        <label>Male</label>
-        <input type="radio" name="sex">
-        <label>Female</label>
-        <input type="radio" name="sex" checked><br>
-        <p>Your hobbies:</p>
-        <label>Gym</label>
-        <input type="checkbox" name="hobby" checked>
-        <label>Swimming</label>
-        <input type="checkbox" name="hobby">
-        <label>Coding</label><br>
-        <input type="checkbox" name="hobby">
-        <label>Password</label><br>
-        <input type="password" required>
-        <label>How hungry are you?</label><br>
-        <input type="range" min="0" max="100" value="20" name="range">
-        <label>Your time</label><br>
-        <input type="time" name="time">
-        <label>Enter your favorite color</label><br>
-        <input type="color" name="color">
-        <label>Enter your Date of Birth</label><br>
-        <input type="date" name="date">
-        <select name="subject">
-            <option>Select subject</option>
-            <option>Math</option>
-            <option>English</option>
-        </select><br>
-        <textarea name="comment" cols="35" rows="7" placeholder="Enter your comment"></textarea><br>
-        <button disabled>Click me please</button>
-        <button>Submit</button>
+
+    <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="POST" class=".form">
+        <div class="container">
+            <h2>Billing address</h2>
+            <div class="row">
+                <div class="form-group col-lg-8 col-sm-6 col-xs-12">
+                    <label>Surname</label><br>
+                    <input type="text" name="surname" placeholder="Enter your surname" maxlength="20" class="form-control">
+                </div>
+                <div class="form-group col-lg-4 col-sm-6 col-xs-12">
+                    <label>Given Name</label><br>
+                    <input type="text" name="given-name" autocomplete="off" maxlength="20" class="form-control"></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12 col-sm-12 col-xs-12">
+                    <label>Email</label>
+                    <input type="email" name="email" minlength="3" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-4 col-sm-6 col-xs-12">
+                    <label>Age</label>
+                    <input type="number" min="18" max="150" class="form-control">
+                </div>
+                <div class="form-group col-lg-4 col-sm-6 col-xs-12">
+                    <label>How hungry are you?</label>
+                    <input type="range" min="0" max="100" value="20" name="range" class="form-control-range">
+                </div>
+                <div class="form-group col-lg-4 col-sm-12 col-xs-12">
+                    <label>Password</label>
+                    <input type="password" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group justify-content-center col-lg-12 col-sm-12 col-xs-12">
+                    <label for="">Hobby</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"
+                                disabled>
+                            <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-lg-4 col-sm-6 col-xs-12">
+                    <label for="">Country</label>
+                    <select name="" id="" class="custom-select">
+                        <option value="">Choose</option>
+                    </select>
+                </div>
+                <div class="form-group col-lg-4 col-sm-6 col-xs-12">
+                    <label for="">State</label>
+                    <select name="" id="" class="custom-select">
+                        <option value="">Choose</option>
+                    </select>
+                </div>
+                <div class="form-group  col-lg-4 col-sm-12 col-xs-12">
+                    <label for="">Zip</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group col-lg-6 offset-lg-2 col-sm-6 offset-sm-2 col-xs-12">
+                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <div class="form-group col-lg-2 col-sm-2 col-xs-12">
+                    <input class="form-control btn btn-primary " type="submit" value="Sub">
+                </div>
+                <div class="form-group col-lg-2 col-sm-2 col-xs-12">
+                    <input class="form-control btn btn-primary btn-outline-danger" type="reset" value="Res">
+                </div>
+            </div>
+
+        </div>
     </form>
 </body>
 
